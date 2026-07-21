@@ -10,7 +10,7 @@ class Solution {
             else{
                 map.put(nums[i],1);
             }
-           
         }
-     return count;}
+        return count;
+    }
 }
