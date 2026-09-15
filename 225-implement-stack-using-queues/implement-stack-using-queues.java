@@ -1,5 +1,5 @@
 class MyStack {
-    Queue<Integer> q = new LinkedList<>();
+    Queue<Integer> q=new LinkedList<>();
     public MyStack() {
         
     }
@@ -12,7 +12,7 @@ class MyStack {
     }
     
     public int pop() {
-      return q.remove(); 
+        return q.remove();
     }
     
     public int top() {
