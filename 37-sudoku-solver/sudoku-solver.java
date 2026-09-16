@@ -25,22 +25,22 @@ class Solution {
                 for(char k='1';k<='9';k++){
                     int idx=k-'1';
                     int box=(i/3)*3+(j/3);
-                    if(!rowmap[i][idx]&&!colmap[j][idx]&&!boxmap[box][idx]){
-                        board[i][j]=k;
-                        rowmap[i][idx]=true;
-                        colmap[j][idx]=true;
-                        boxmap[box][idx]=true;
-                        if(helper(board)){
-                            return true;
-                        }
-                        board[i][j]='.';
-                        rowmap[i][idx]=false;
-                        colmap[j][idx]=false;
-                        boxmap[box][idx]=false;
+                    if(!rowmap[i][idx] && !colmap[j][idx] && !boxmap[box][idx]){
+                    board[i][j]=k;
+                    rowmap[i][idx]=true;
+                    colmap[j][idx]=true;
+                    boxmap[box][idx]=true;
+                    if(helper(board)){
+                        return true;
+                    }
+                    board[i][j]='.';
+                    rowmap[i][idx]=false;
+                    colmap[j][idx]=false;
+                    boxmap[box][idx]=false;
                 }
-                }
-                return false;
             }
+            return false;
+        }
         }
         return true;
     }
