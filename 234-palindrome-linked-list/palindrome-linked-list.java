@@ -16,22 +16,22 @@ class Solution {
             slow=slow.next;
             fast=fast.next.next;
         }
-        ListNode curr=slow;
-        ListNode prev=null;
+       ListNode prev=null;
+       ListNode curr=slow;
         while(curr!=null){
             ListNode next=curr.next;
             curr.next=prev;
             prev=curr;
             curr=next;
         }
-        ListNode temp1=head;
-        ListNode temp2=prev;
-        while(temp2!=null){
-            if(temp1.val != temp2.val){
+       ListNode t1=head;
+        ListNode t2=prev;
+        while(t2!=null){
+            if(t1.val!=t2.val){
                 return false;
             }
-            temp1=temp1.next;
-            temp2=temp2.next;
+            t1=t1.next;
+            t2=t2.next;
         }
         return true;
     }
