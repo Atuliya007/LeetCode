@@ -14,7 +14,7 @@ class Solution {
                 rowmap[i][val-1]=true;
                 colmap[j][val-1]=true;
                 boxmap[box][val-1]=true;
-            }
+;            }
         }
         helper(board);
     }
@@ -32,15 +32,15 @@ class Solution {
                     boxmap[box][idx]=true;
                     if(helper(board)){
                         return true;
-                    }
+                    } 
                     board[i][j]='.';
                     rowmap[i][idx]=false;
                     colmap[j][idx]=false;
                     boxmap[box][idx]=false;
+                    }
                 }
+                return false;
             }
-            return false;
-        }
         }
         return true;
     }
