@@ -21,7 +21,7 @@ class Solution {
         inorder(root.right,res);
     }
     public List<Integer> inorderTraversal(TreeNode root) {
-        ArrayList<Integer> result=new ArrayList<>();
+        ArrayList<Integer> result = new ArrayList<>();
         inorder(root,result);
         return result;
     }
